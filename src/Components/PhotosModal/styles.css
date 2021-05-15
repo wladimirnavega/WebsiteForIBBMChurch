@@ -1,0 +1,15 @@
+.modal-content {
+  background-color: #383838 !important;
+}
+
+.btn-primary {
+  background-color: #45B3E6 !important;
+}
+
+#contained-modal-title-vcenter {
+  color: #F8F8F8 !important;
+}
+
+.close span {
+  color: #F8F8F8 !important;
+}

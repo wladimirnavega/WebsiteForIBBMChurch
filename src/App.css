@@ -1,38 +1,324 @@
+a:link, a:visited, a:active {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #ccc;
+}
+
 .App {
+  background-color: #F5F5F5;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  width: 100%;
+  height: 4572px;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background: url(./assets/images/Header_Background.jpg);
+  background-size: 100%;
+  width: 100%;
+  height: 701px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0%;
+  background-image: linear-gradient( 180deg, rgba(62, 64, 149, 0.3) 0%, rgba(62, 64, 149, 0.3) 86.46%, rgba(62, 64, 149, 0.0) 100%);
+  width: 100%;
+  height: 142px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-logo-menu {
+  position: absolute;
+  width: 72px;
+  height: 89.1px;
+  left: 8%;
+  top: 8%;
+}
+
+.App-menu ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 8%;
+  list-style-type: none;
+}
+
+.App-menu li {
+  padding-left: 64px;
+}
+
+.App-menu li>a {
+  text-decoration: none;
+  color: #bbdeea;
+  font-size: 18px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.App-menu li>a:hover {
+  color: #379BBE;
+  font-size: 20px;
+}
+
+.App-menu-center-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 75px;
+  padding-top: 30px;
+}
+
+.App-logo-header {
+  opacity: 0.7;
+}
+
+.App-menu-line {
+  height: 329px;
+  border-left: 1.5px solid;
+  border-color: #45B3E6;
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+.App-menu-text-title {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 96px;
+  text-align: left;
+  line-height: 1;
+}
+
+.App-footer-for-header-container {
+  background-color: #3E4095;
+  opacity: 0.75;
+  width: 100%;
+  height: 100px;
+}
+
+.App-footer-for-header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-connection-rectangle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  margin: 32px 32px;
+}
+
+.App-outside-connection-rectangle {
+  position: absolute;
+  width: 107.48px;
+  height: 107.48px;
+  background: rgba(56, 56, 56, 0.3);
+  transform: rotate(-45deg);
+}
+
+.App-inside-connection-rectangle {
+  position: absolute;
+  width: 89.1px;
+  height: 87.68px;
+  background: rgba(255, 255, 255, 0.6);
+  transform: rotate(-45deg);
+}
+
+.App-connection-logo {
+  position: absolute;
+  width: 53px;
+  height: 66px;
+  filter: contrast(100%) saturate(0%) brightness(50%) grayscale(100%);
+}
+
+.App-left-text-footer-for-header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-footer-line {
+  height: 68px;
+  border-left: 1.5px solid;
+  border-color: #efeded;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.App-text-footer-for-header {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #efeded;
+  font-size: 12px;
+  text-align: left;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.App-left-text-footer-for-header-container p:nth-child(1) {
+  font-size: 20px;
+}
+
+.App-right-text-footer-for-header-container {
+  width: 240px;
+}
+
+.section-our-files {
+  margin-top: 40px;
+}
+
+.section-our-files>p:nth-of-type(1) {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 55px;
+  text-align: center;
+  color: #000;
+}
+
+.rec.rec-dot {
+  display: none;
+}
+
+.rec.rec-dot_active {
+  display: none;
+}
+
+.rec.rec-arrow:enabled, .rec.rec-arrow:hover, .rec.rec-arrow:focus {
+  background-color: #c4c4c4;
+  border-radius: 50%;
+}
+
+.section-bulletins {
+  width: 100%;
+  height: 70vh;  
+  background: linear-gradient( 180deg, 
+  rgba(0, 0, 0, 0.9) -0.5%,
+  rgba(0, 0, 0, 0.426562) 102.96%, 
+  rgba(0, 0, 0, 0) 102.97%),
+  url(./assets//images/bulletins-background.jpg)
+  no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-bulletins>p:nth-of-type(1) {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 55px;
+  text-align: center;
+  color: #fff;
+}
+
+.section-bulletins > span {
+  color: #fff;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+  font-weight: lighter;
+  margin-bottom: 30px;
+}
+
+.section-bulletins > button {
+  background-color: #45B3E6;
+  color: #000;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  opacity: 0.8;
+}
+
+.ministries-title {  
+  font-family: 'Quicksand', sans-serif;
+  font-size: 55px;
+  text-align: left;
+  color: #000;
+  display: flex;
+  flex-direction: row;  
+  align-items: center;
+  padding-left: 10%;
+  margin-top: 50px; 
+  margin-bottom: 50px; 
+}
+
+.ministries-title > hr {
+  width: 60% !important;
+  text-align:left;
+  margin-left:20px;
+  background-color: #BEBAB5; 
+  height: 2px !important; 
+  border: none;
+}
+
+.ministries-content-container {
+  display: flex;
+  flex-direction: row;  
+  align-items: flex-start;
+  justify-content: center;
+  height: 65vh;
+}
+
+.ministries-card-left-line {
+  border-left: 1px solid #BEBAB5;
+  height: 310px;  
+}
+
+.ministries-footer-line {
+  width: 100%;
+  background-color: #BEBAB5; 
+  height: 2px !important; 
+  border: none;
+}
+
+.section-our-history {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.section-our-history>p:nth-of-type(1) {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 55px;
+  text-align: center;
+  color: #000;
+}
+
+.our-history-image {
+  width: 590px;
+  border-radius: 10px;
+  float: left;
+  margin-right: 32px;
+  filter: grayscale(100%);
+}
+
+.our-history-content-container {
+  margin-top: 30px;
+}
+
+.our-history-content-container p {  
+  font-family: 'Quicksand', sans-serif;
+  font-weight: normal;
+  font-size: 15px;    
+  text-align: left;
 }

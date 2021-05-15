@@ -1,0 +1,53 @@
+.ministries-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 310px;
+  width: 238px;
+  cursor: pointer;
+}
+
+.ministries-card-container:hover {
+  background-color: #eae3e3;
+}
+
+.ministries-card-container:hover .ministries-card-icon-container {  
+  background: linear-gradient( to left, #3F4359 0%, #45B3E6 100%);   
+}
+
+.ministries-card-container:hover .ministries-card-title * {    
+  color: #3F4359;   
+}
+
+.ministries-card-icon-container {
+  width: 114px;
+  height: 114px;
+  border-radius: 50%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #3F4359;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ministries-card-title {
+  margin-top: 20%;
+}
+
+.ministries-card-title>p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #45B3E6;
+  margin-bottom: 5px !important;
+}
+
+.ministries-card-title>span {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 13px;
+  font-weight: lighter;
+  color: #958B7E;
+}
