@@ -25,26 +25,21 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: white;  
 }
 
 .App-menu {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  position: absolute;
-  top: 0%;
+  justify-content: flex-end; 
+  align-items: center; 
   background-image: linear-gradient( 180deg, rgba(62, 64, 149, 0.3) 0%, rgba(62, 64, 149, 0.3) 86.46%, rgba(62, 64, 149, 0.0) 100%);
   width: 100%;
-  height: 142px;
+  height: 142px;  
 }
 
-.App-logo-menu {
-  position: absolute;
-  width: 72px;
-  height: 89.1px;
-  left: 8%;
-  top: 8%;
+.App-logo-menu {  
+  margin-right: 25vw;  
 }
 
 .App-menu ul {
@@ -65,19 +60,19 @@ a:hover {
   color: #bbdeea;
   font-size: 18px;
   font-family: 'Josefin Sans', sans-serif;
+  font-weight: bold;
 }
 
 .App-menu li>a:hover {
-  color: #379BBE;
-  font-size: 20px;
+  color: #379BBE;  
 }
 
 .App-menu-center-container {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  margin-top: 75px;
-  padding-top: 30px;
+  justify-content: center;
+  align-items: center;  
+  padding-top: 30px;  
 }
 
 .App-logo-header {
@@ -188,6 +183,10 @@ a:hover {
   color: #000;
 }
 
+.arrowsCarousel:hover .arrows {
+  color: #c4c4c4 !important; 
+}
+
 .rec.rec-dot {
   display: none;
 }
@@ -208,7 +207,7 @@ a:hover {
   rgba(0, 0, 0, 0.9) -0.5%,
   rgba(0, 0, 0, 0.426562) 102.96%, 
   rgba(0, 0, 0, 0) 102.97%),
-  url(./assets//images/bulletins-background.jpg)
+  url(./assets/images/bulletins-background.jpg)
   no-repeat center center fixed;
   background-size: cover;
   display: flex;
@@ -233,7 +232,7 @@ a:hover {
 }
 
 .section-bulletins > button {
-  background-color: #45B3E6;
+  background: linear-gradient( to left, #454682 0%, #45B3E6 100%); 
   color: #000;
   font-family: 'Quicksand', sans-serif;
   font-size: 14px;
@@ -244,6 +243,13 @@ a:hover {
   padding-left: 20px;
   padding-right: 20px;
   opacity: 0.8;
+  transition: 0.3s;
+}
+
+.section-bulletins > button:hover {
+  background: linear-gradient( to left, #8081b2 0%, #89d2f4 100%); 
+  color: #454682;
+  transform:scale(1.05,1.05);
 }
 
 .ministries-title {  
@@ -281,20 +287,18 @@ a:hover {
   height: 310px;  
 }
 
-.ministries-footer-line {
+.footer-line {
   width: 100%;
   background-color: #BEBAB5; 
   height: 2px !important; 
-  border: none;
+  border: none;  
 }
 
 .section-our-history {
   margin-top: 50px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin-left: 10vw;
-  margin-right: 10vw;
+  align-items: flex-start;  
 }
 
 .section-our-history>p:nth-of-type(1) {
@@ -302,6 +306,8 @@ a:hover {
   font-size: 55px;
   text-align: center;
   color: #000;
+  margin-left: 10vw;
+  margin-right: 10vw;
 }
 
 .our-history-image {
@@ -314,11 +320,35 @@ a:hover {
 
 .our-history-content-container {
   margin-top: 30px;
+  padding-bottom: 50px;
+  margin-left: 10vw;
+  margin-right: 10vw;
 }
 
 .our-history-content-container p {  
   font-family: 'Quicksand', sans-serif;
   font-weight: normal;
   font-size: 15px;    
-  text-align: left;
+  text-align: left;  
+}
+
+.section-messages {
+  margin-top: 20px;  
+}
+
+.section-messages>p:nth-of-type(1) {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 55px;
+  text-align: center;
+  color: #000;  
+}
+
+.messages-content-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 230px;
+  background-color: black;
+  opacity: 1;  
 }

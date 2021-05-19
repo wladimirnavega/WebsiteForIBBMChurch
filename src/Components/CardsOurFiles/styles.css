@@ -20,6 +20,7 @@
   background: #F5F5F5;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 10px;   
+  transition: 0.3s;
 }
 
 .card-container>p {
@@ -56,15 +57,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;    
 }
 
 .arrowsCarousel {
   background-color: transparent; 
   border: none; 
   outline:none;
+  height: 100%;
+  opacity: 1 !important;
 }
 
-.arrowsCarousel:hover{
+.arrowsContainer:hover{
   cursor: pointer;  
   border: none;
   outline:none; 
@@ -80,10 +84,16 @@
 
 .arrowsCarousel:link *, .arrowsCarousel:visited *, .arrowsCarousel:active * {
   font-size: 300px;
-  transition: font 0.1s ease,
+  transition: font 0.1s ease;
 }
 
 .cardLink {
-  border: none !important;
+  border: none !important;   
 }
+
+.cardLink:hover .card-container {
+  transform:scale(1.05,1.05);  
+  background-color: #aad8ed;
+}
+
 

@@ -11,31 +11,24 @@ import Carousel, { consts } from 'react-elastic-carousel'
 
 import CardsOurFiles from './Components/CardsOurFiles'
 import MinistriesCards from './Components/MinistriesCards'
+import MessageCarousel from  './Components/MessageCarousel'
+import ArrowButton from './Components/ArrowButton'
 
-import { items } from './utils/imageList'
+import { items, breakPoints } from './utils/imageList'
 
 function App() {
 
-  const breakPoints = [
-    { width: 1, itemsToShow: 1 },
-    { width: 500, itemsToShow: 2 },
-    { width: 800, itemsToShow: 3 },
-    { width: 1000, itemsToShow: 4 }
-  ]
-
-
-
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="App-header" id="header">
         <div className="App-menu">
-          <a href="/#">
+          <a href="#header">
             <img src={logo} width="72" height="89,1" className="App-logo-menu" alt="Logo" />
           </a>
           <ul className="App-menu-list" >
             <li><a href="#our-files">Arquivos</a></li>
             <li><a href="#bulletins">Boletins</a></li>
-            <li><a href="/#">Mensagens</a></li>
+            <li><a href="#messages">Mensagens</a></li>
             <li><a href="#ministries">Ministérios</a></li>
             <li><a href="#our-history">Nossa história</a></li>
           </ul>
@@ -69,19 +62,15 @@ function App() {
               breakPoints={breakPoints}
               renderArrow={({ type, onClick }) => {
                 const pointer = type === consts.PREV ?
-                  <BsFillCaretLeftFill
-                    size={40}
-                    color="#383838"
-                    className="arrows"
-                    onMouseOut={({ target }) => target.style.color = '#383838'}
-                    onMouseOver={({ target }) => target.style.color = '#c4c4c4'}
+                  <ArrowButton 
+                  icon={BsFillCaretLeftFill} 
+                  color="#383838" 
+                  colorMouserOver="#c4c4c4"
                   /> :
-                  <BsFillCaretRightFill
-                    size={40}
-                    color="#383838"
-                    className="arrows"
-                    onMouseOut={({ target }) => target.style.color = '#383838'}
-                    onMouseOver={({ target }) => target.style.color = '#c4c4c4'}
+                  <ArrowButton 
+                  icon={BsFillCaretRightFill} 
+                  color="#383838" 
+                  colorMouserOver="#c4c4c4"
                   />
                 return (
                   <div className="arrowsContainer">
@@ -152,7 +141,7 @@ fique por dentro das atividades de nossa igreja.</span>
 
           </div>
 
-          <hr className="ministries-footer-line" />
+          <hr className="footer-line" />
 
         </section>
 
@@ -161,7 +150,7 @@ fique por dentro das atividades de nossa igreja.</span>
           <div className="our-history-content-container">
             <img
               src={ourHistoryImage}
-              alt="our-history-image"
+              alt="our-history-images"
               className="our-history-image"
             />
             <p>
@@ -199,29 +188,39 @@ fique por dentro das atividades de nossa igreja.</span>
               de Congregação, passando a funcionar assim no dia 01 de janeiro de 1996
           </p>
 
-          <p>
+            <p>
               Desde 2006 a Igreja conta com um terreno que foi adquirido para ser anexada a sede da Congregação,
               possibilitando assim a ampliação do espaço físico no futuro.
           </p>
 
-          <p>
-          No dia 10 de dezembro de 1995 foi eleita a primeira diretoria da Congregação, sendo o Pastor Jessé Cláudio 
-          Pinto o seu primeiro diretor. Depois do Pr. Jessé, outros irmãos e pastores estiveram na liderança do trabalho
-           aqui nesta localidade: O Diácono José Álem Corcino, Pr. Ezequiel Pimentel de Mattos, Pr. Braz Januário da Silva,
-            o irmão Romi Rezende Rabello, Varlei Caetano, o Pr. Cleber Montes Moreira que passou aproximadamente 13 anos 
-            por aqui e atualmente o Pr. Fagner Dias Boiça que está aqui desde abril de 2018.
+            <p>
+              No dia 10 de dezembro de 1995 foi eleita a primeira diretoria da Congregação, sendo o Pastor Jessé Cláudio
+              Pinto o seu primeiro diretor. Depois do Pr. Jessé, outros irmãos e pastores estiveram na liderança do trabalho
+              aqui nesta localidade: O Diácono José Álem Corcino, Pr. Ezequiel Pimentel de Mattos, Pr. Braz Januário da Silva,
+              o irmão Romi Rezende Rabello, Varlei Caetano, o Pr. Cleber Montes Moreira que passou aproximadamente 13 anos
+              por aqui e atualmente o Pr. Fagner Dias Boiça que está aqui desde abril de 2018.
           </p>
 
-          <p>
-          Hoje estamos organizando a Igreja Batista bairro Matadouro com 38 membros. Louvamos a Deus por tudo o que ele 
-          tem feito nesta Igreja, louvamos a Deus pela vida daqueles que por aqui passaram e que aqui estão. Suplicamos 
-          ao Deus todo poderoso que nos abençoe e use na propagação o evangelho do Senhor Jesus Cristo aqui nesta comunidade.
+            <p>
+              Hoje estamos organizando a Igreja Batista bairro Matadouro com 38 membros. Louvamos a Deus por tudo o que ele
+              tem feito nesta Igreja, louvamos a Deus pela vida daqueles que por aqui passaram e que aqui estão. Suplicamos
+              ao Deus todo poderoso que nos abençoe e use na propagação o evangelho do Senhor Jesus Cristo aqui nesta comunidade.
           </p>
 
 
           </div>
 
+          <hr className="footer-line" />
+
         </section>
+
+        <section className="section-messages" id="messages" >
+          <p>Mensagens</p>
+          <div className="messages-content-container">
+                <MessageCarousel />
+          </div>
+        </section>
+
       </main>
 
     </div >

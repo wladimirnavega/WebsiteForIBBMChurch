@@ -142,6 +142,50 @@ const items = [
   },
 ]
 
+const breakPoints = [
+  { width: 1, itemsToShow: 1 },
+  { width: 500, itemsToShow: 2 },
+  { width: 800, itemsToShow: 3 },
+  { width: 1000, itemsToShow: 4 }
+]
+
+// INSERIR A TAGS DO VIDEOS MAI ATUAL NA POSIÇÃO
+// DE CIMA E APAGAR O ULTIMO
+const imagesOfVideosList = [
+  {    
+    tag: "gxYpOUuZnOk"
+  },
+  {    
+    tag: "B25vEvtPtis" 
+  },
+  {    
+    tag: "LtndcSsuP7U"
+  },
+  {    
+    tag: "VXOnBMLm6Vg"
+  },
+  {    
+    tag: "BCin_zgVMOs"
+  },
+  {    
+    tag: "TErF33vzYw4"
+  },
+  {   
+    tag: "bBBtjAtCpXQ"
+  },
+  { 
+    tag: "-kGwh542xb0"
+  },
+  {    
+    tag: "vE-JXP9zPGU"
+  },
+  {    
+    tag: "JQAq3LTJxa8"
+  }
+]
+
 export {
-  items
+  items,
+  breakPoints,
+  imagesOfVideosList
 }
