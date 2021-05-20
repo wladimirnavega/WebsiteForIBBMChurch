@@ -1,22 +1,46 @@
 import React from 'react';
 
 import { BsFillCaretLeftFill, BsFillCaretRightFill, BsPeopleFill } from "react-icons/bs";
-import { FaBabyCarriage, FaGuitar, FaPray, FaHandshake } from "react-icons/fa";
+import {
+  FaBabyCarriage,
+  FaGuitar,
+  FaPray,
+  FaHandshake,
+  FaYoutube,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaPhoneSquare
+} from "react-icons/fa";
 
 import './App.css';
 import logo from './assets/images/logo.png'
+import logoIcon from './assets/images/icons/logo.png'
 import ourHistoryImage from './assets/images/photos/Culto de organização da Igreja/03.jpg'
+
+import ImageCBF from './assets/images/logo-links/cbf.png'
+import ImageCBB from './assets/images/logo-links/cbb.png'
+import ImageJMM from './assets/images/logo-links/jmm.png'
+import ImageJMN from './assets/images/logo-links/jmn.png'
 
 import Carousel, { consts } from 'react-elastic-carousel'
 
 import CardsOurFiles from './Components/CardsOurFiles'
 import MinistriesCards from './Components/MinistriesCards'
-import MessageCarousel from  './Components/MessageCarousel'
+import MessageCarousel from './Components/MessageCarousel'
 import ArrowButton from './Components/ArrowButton'
+import CardsLinks from './Components/CardsLinks'
 
 import { items, breakPoints } from './utils/imageList'
 
 function App() {
+
+  const openContatoLink = (url) => {
+
+    const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+    if (newWindow) {
+      newWindow.opener = null
+    }
+  }
 
   return (
     <div className="App">
@@ -62,15 +86,15 @@ function App() {
               breakPoints={breakPoints}
               renderArrow={({ type, onClick }) => {
                 const pointer = type === consts.PREV ?
-                  <ArrowButton 
-                  icon={BsFillCaretLeftFill} 
-                  color="#383838" 
-                  colorMouserOver="#c4c4c4"
+                  <ArrowButton
+                    icon={BsFillCaretLeftFill}
+                    color="#383838"
+                    colorMouserOver="#c4c4c4"
                   /> :
-                  <ArrowButton 
-                  icon={BsFillCaretRightFill} 
-                  color="#383838" 
-                  colorMouserOver="#c4c4c4"
+                  <ArrowButton
+                    icon={BsFillCaretRightFill}
+                    color="#383838"
+                    colorMouserOver="#c4c4c4"
                   />
                 return (
                   <div className="arrowsContainer">
@@ -217,9 +241,111 @@ fique por dentro das atividades de nossa igreja.</span>
         <section className="section-messages" id="messages" >
           <p>Mensagens</p>
           <div className="messages-content-container">
-                <MessageCarousel />
+            <MessageCarousel />
           </div>
         </section>
+
+        <section className="section-links" id="links">
+          <CardsLinks
+            logo={ImageCBF}
+            text="Convenção Batista Fluminense"
+            url="https://batistafluminense.org.br/"
+          />
+
+          <CardsLinks
+            logo={ImageCBB}
+            text="Convenção Batista Brasileira"
+            url="http://www.convencaobatista.com.br/siteNovo/index.php"
+          />
+
+          <CardsLinks
+            logo={ImageJMM}
+            text="Junta de Missões Mundiais"
+            url="https://missoesmundiais.com.br/"
+          />
+
+          <CardsLinks
+            logo={ImageJMN}
+            text="Junta de Missões Nacionais"
+            url="https://missoesnacionais.org.br/"
+          />
+
+        </section>
+
+        <footer className="footer">
+          <div className="footer-header-container">
+            <div className="footer-header-logo">
+              <img src={logoIcon} alt="logo-footer" />
+              <span>Igreja Batista Bairro Matadouro</span>
+            </div>
+            <div className="footer-header-links">
+              <FaYoutube
+                size={37}
+                color="#DCDCDC"
+                className="footer-header-links-icon"
+                onClick={() => { openContatoLink("https://www.youtube.com/channel/UC3ry81G5ukbur_hzc4R8C3Q") }}
+              />
+              <FaEnvelope
+                size={31}
+                color="#DCDCDC"
+                className="footer-header-links-icon"
+                onClick={() => {
+                  openContatoLink(
+                    "https://mail.google.com/mail/?view=cm&fs=1&to=batistanobairromatadouro@hotmail.com&su=CONTATO_SITE&body="
+                  )
+                }}
+              />
+            </div>
+          </div>
+          <hr />
+          <div className="footer-body-container">
+            <div className="footer-body-home">
+              <h1>HOME</h1>
+              <a href="#our-files">Arquivos</a>
+              <a href="#bulletins">Boletins</a>
+              <a href="#messages">Mensagens</a>
+              <a href="#ministries">Ministérios</a>
+              <a href="#our-history">Nossa história</a>
+            </div>
+            <div className="footer-body-links">
+              <h1>LINKS ÚTEIS</h1>
+              <a href="#our-files">Convenção Batista Fluminense</a>
+              <a href="#bulletins">Convenção Batista Brasileira</a>
+              <a href="#messages">Junta de Missões Nacionais</a>
+              <a href="#ministries">Junta de Missões Mundiais</a>
+            </div>
+            <div className="footer-body-contact">
+              <h1>CONTATO</h1>
+              <a href="#our-files">
+                <div className="footer-body-contact-content-container">
+                  <FaMapMarkerAlt size={30} />
+                  <span>Av. Santos Dumont, nº 330<br />
+                    Bairro Matadouro - Itaperuna-RJ</span>
+                </div>
+              </a>
+
+              <a href="#our-files">
+                <div className="footer-body-contact-content-container">
+                  <FaEnvelope size={30} />
+                  <span>batistanobairromatadouro@hotmail.com</span>
+                </div>
+              </a>
+
+              <a href="#our-files">
+                <div className="footer-body-contact-content-container">
+                  <FaPhoneSquare size={30} />
+                  <span>(22) 99999-9999</span>
+                </div>
+              </a>
+
+            </div>
+          </div>
+          <hr />
+          <div className="footer-copyright-container">
+            <span>Copyrights 	&#169; 2021</span>
+            <span>Desenvolvido por Wladimir Navega</span>
+          </div>
+        </footer>
 
       </main>
 
