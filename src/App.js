@@ -34,7 +34,7 @@ import { items, breakPoints } from './utils/imageList'
 
 function App() {
 
-  const openContatoLink = (url) => {
+  const openLink = (url) => {
 
     const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
     if (newWindow) {
@@ -283,14 +283,14 @@ fique por dentro das atividades de nossa igreja.</span>
                 size={37}
                 color="#DCDCDC"
                 className="footer-header-links-icon"
-                onClick={() => { openContatoLink("https://www.youtube.com/channel/UC3ry81G5ukbur_hzc4R8C3Q") }}
+                onClick={() => { openLink("https://www.youtube.com/channel/UC3ry81G5ukbur_hzc4R8C3Q") }}
               />
               <FaEnvelope
                 size={31}
                 color="#DCDCDC"
                 className="footer-header-links-icon"
                 onClick={() => {
-                  openContatoLink(
+                  openLink(
                     "https://mail.google.com/mail/?view=cm&fs=1&to=batistanobairromatadouro@hotmail.com&su=CONTATO_SITE&body="
                   )
                 }}
@@ -309,34 +309,35 @@ fique por dentro das atividades de nossa igreja.</span>
             </div>
             <div className="footer-body-links">
               <h1>LINKS ÚTEIS</h1>
-              <a href="#our-files">Convenção Batista Fluminense</a>
-              <a href="#bulletins">Convenção Batista Brasileira</a>
-              <a href="#messages">Junta de Missões Nacionais</a>
-              <a href="#ministries">Junta de Missões Mundiais</a>
+              <button onClick={() => openLink("https://batistafluminense.org.br/")}>
+                Convenção Batista Fluminense
+              </button>
+              <button onClick={() => openLink("http://www.convencaobatista.com.br/siteNovo/index.php")}>
+                Convenção Batista Brasileira
+              </button>
+              <button onClick={() => openLink("https://missoesmundiais.com.br/")}>
+                Junta de Missões Mundiais
+              </button>
+              <button onClick={() => openLink("https://missoesnacionais.org.br/")}>
+                Junta de Missões Nacionais
+              </button>              
             </div>
             <div className="footer-body-contact">
               <h1>CONTATO</h1>
-              <a href="#our-files">
-                <div className="footer-body-contact-content-container">
-                  <FaMapMarkerAlt size={30} />
-                  <span>Av. Santos Dumont, nº 330<br />
+
+              <div className="footer-body-contact-content-container">
+                <FaMapMarkerAlt size={30} />
+                <span>Av. Santos Dumont, nº 330<br />
                     Bairro Matadouro - Itaperuna-RJ</span>
-                </div>
-              </a>
-
-              <a href="#our-files">
-                <div className="footer-body-contact-content-container">
-                  <FaEnvelope size={30} />
-                  <span>batistanobairromatadouro@hotmail.com</span>
-                </div>
-              </a>
-
-              <a href="#our-files">
-                <div className="footer-body-contact-content-container">
-                  <FaPhoneSquare size={30} />
-                  <span>(22) 99999-9999</span>
-                </div>
-              </a>
+              </div>
+              <div className="footer-body-contact-content-container">
+                <FaEnvelope size={30} />
+                <span>batistanobairromatadouro@hotmail.com</span>
+              </div>
+              <div className="footer-body-contact-content-container">
+                <FaPhoneSquare size={30} />
+                <span>(22) 99999-9999</span>
+              </div>
 
             </div>
           </div>

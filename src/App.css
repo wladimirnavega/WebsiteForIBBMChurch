@@ -459,6 +459,20 @@ a:hover {
   color: #45B3E6;    
 }
 
+.footer-body-container button {
+  color: #DCDCDC;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 12px;
+  font-weight: normal !important;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.footer-body-container button:hover {
+  color: #45B3E6;    
+}
+
 .footer-body-container + hr {
   margin: 0;
   padding: 0;
@@ -473,6 +487,10 @@ a:hover {
   flex-direction: row !important;  
   align-items: center !important;
   justify-content: center !important;
+  color: #DCDCDC;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 12px;
+  font-weight: normal !important; 
 }
 
 .footer-body-contact-content-container span {
