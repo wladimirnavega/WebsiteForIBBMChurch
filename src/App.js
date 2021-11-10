@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { BsFillCaretLeftFill, BsFillCaretRightFill, BsPeopleFill } from "react-icons/bs";
 import {
@@ -34,12 +34,36 @@ import { items, breakPoints } from './utils/imageList'
 
 function App() {
 
+  const [toggleMenuShow, setToggleMenuShow] = useState(true)
+
   const openLink = (url) => {
 
     const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
     if (newWindow) {
       newWindow.opener = null
     }
+  }
+
+  const toggleMenu = () => {
+
+    const menuSection = document.querySelector(".App-menu")
+
+    document.body.style.overflow = toggleMenuShow ? "hidden" : "initial"
+
+    menuSection.classList.toggle("on", toggleMenuShow)
+    setToggleMenuShow(!toggleMenuShow)
+
+  }
+
+  const bodyOverflow = () => {    
+
+    const menuSection = document.querySelector(".App-menu")
+
+    menuSection.classList.toggle("on", false)
+
+    document.body.style.overflow = "initial"
+
+    setToggleMenuShow(true)
   }
 
   return (
@@ -49,12 +73,17 @@ function App() {
           <a href="#header">
             <img src={logo} width="72" height="89,1" className="App-logo-menu" alt="Logo" />
           </a>
+          <div className="menu-toggle" onClick={() => toggleMenu()}>
+            <div className="one"></div>
+            <div className="two"></div>
+            <div className="three"></div>
+          </div>
           <ul className="App-menu-list" >
-            <li><a href="#our-files">Arquivos</a></li>
-            <li><a href="#bulletins">Boletins</a></li>
-            <li><a href="#messages">Mensagens</a></li>
-            <li><a href="#ministries">Ministérios</a></li>
-            <li><a href="#our-history">Nossa história</a></li>
+            <li><a href="#our-files" onClick={bodyOverflow}>Arquivos</a></li>
+            <li><a href="#bulletins" onClick={bodyOverflow}>Boletins</a></li>
+            <li><a href="#messages" onClick={bodyOverflow}>Mensagens</a></li>
+            <li><a href="#ministries" onClick={bodyOverflow}>Ministérios</a></li>
+            <li><a href="#our-history" onClick={bodyOverflow}>Nossa história</a></li>
           </ul>
         </div>
         <div className="App-menu-center-container">
@@ -117,7 +146,7 @@ function App() {
         <section className="section-bulletins" id="bulletins">
           <p> Boletins </p>
           <span>Acesse aqui nossos boletins semanais e <br />
-fique por dentro das atividades de nossa igreja.</span>
+            fique por dentro das atividades de nossa igreja.</span>
           <button>Acesse os boletins aqui</button>
         </section>
 
@@ -186,36 +215,36 @@ fique por dentro das atividades de nossa igreja.</span>
               de pregação algum tempo depois da Primeira igreja Batista de Itaperuna.
               Da generosidade e unidade de alguns irmãos nasceu a um projeto que
               em 2019 se tornaria a Igreja Batista bairro Matadouro.
-          </p>
+            </p>
 
             <p>
               Em 14 de novembro de 1993, a Primeira Igreja Batista de Itaperuna
               decidiu em sua assembleia regular de membros a aquisição de um terreno
               para a construção de uma sede para o ponto de pregação.
-          </p>
+            </p>
 
             <p>
               Na sessão do mês seguinte ficou registrada a compra de um terreno medindo 12x30 metros, no valor de
               CR$300.000,00 (trezentos mil cruzeiros reais), na Av. Santos Dumont,
               lote 173, quadra 9. Onde estamos hoje.
-          </p>
+            </p>
 
             <p>
               Em 09 de abril de 1995, em sua assembleia administrativa, a Igreja deixou marcado o dia 03 de junho, do mesmo
               ano, para a inauguração da sede própria do ponto de pregação. Na mesma sessão a igreja discute elevar o
               trabalho à Congregação, com o objetivo de oferecer Escola Bíblica e cultos aos domingos para atender aos
               irmãos e moradores do bairro.
-          </p>
+            </p>
 
             <p>
               Em 08 de outubro de 1995, a Primeira Igreja Batista de Itaperuna votou elevar o Ponto de Pregação à categoria
               de Congregação, passando a funcionar assim no dia 01 de janeiro de 1996
-          </p>
+            </p>
 
             <p>
               Desde 2006 a Igreja conta com um terreno que foi adquirido para ser anexada a sede da Congregação,
               possibilitando assim a ampliação do espaço físico no futuro.
-          </p>
+            </p>
 
             <p>
               No dia 10 de dezembro de 1995 foi eleita a primeira diretoria da Congregação, sendo o Pastor Jessé Cláudio
@@ -223,13 +252,13 @@ fique por dentro das atividades de nossa igreja.</span>
               aqui nesta localidade: O Diácono José Álem Corcino, Pr. Ezequiel Pimentel de Mattos, Pr. Braz Januário da Silva,
               o irmão Romi Rezende Rabello, Varlei Caetano, o Pr. Cleber Montes Moreira que passou aproximadamente 13 anos
               por aqui e atualmente o Pr. Fagner Dias Boiça que está aqui desde abril de 2018.
-          </p>
+            </p>
 
             <p>
               Hoje estamos organizando a Igreja Batista bairro Matadouro com 38 membros. Louvamos a Deus por tudo o que ele
               tem feito nesta Igreja, louvamos a Deus pela vida daqueles que por aqui passaram e que aqui estão. Suplicamos
               ao Deus todo poderoso que nos abençoe e use na propagação o evangelho do Senhor Jesus Cristo aqui nesta comunidade.
-          </p>
+            </p>
 
 
           </div>
@@ -320,7 +349,7 @@ fique por dentro das atividades de nossa igreja.</span>
               </button>
               <button onClick={() => openLink("https://missoesnacionais.org.br/")}>
                 Junta de Missões Nacionais
-              </button>              
+              </button>
             </div>
             <div className="footer-body-contact">
               <h1>CONTATO</h1>
@@ -328,7 +357,7 @@ fique por dentro das atividades de nossa igreja.</span>
               <div className="footer-body-contact-content-container">
                 <FaMapMarkerAlt size={30} />
                 <span>Av. Santos Dumont, nº 330<br />
-                    Bairro Matadouro - Itaperuna-RJ</span>
+                  Bairro Matadouro - Itaperuna-RJ</span>
               </div>
               <div className="footer-body-contact-content-container">
                 <FaEnvelope size={30} />

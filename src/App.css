@@ -1,3 +1,14 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #F5F5F5;
+}
+
 a:link, a:visited, a:active {
   text-decoration: none;
   color: black;
@@ -12,14 +23,13 @@ a:hover {
   background-color: #F5F5F5;
   text-align: center;
   width: 100%;
-  height: 4572px;
 }
 
 .App-header {
   background: url(./assets/images/Header_Background.jpg);
   background-size: 100%;
   width: 100%;
-  height: 701px;
+  height: 48.6vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,7 +45,7 @@ a:hover {
   align-items: center;
   background-image: linear-gradient( 180deg, rgba(62, 64, 149, 0.3) 0%, rgba(62, 64, 149, 0.3) 86.46%, rgba(62, 64, 149, 0.0) 100%);
   width: 100%;
-  height: 142px;
+  height: 9.86vw;
 }
 
 .App-logo-menu {
@@ -77,10 +87,12 @@ a:hover {
 
 .App-logo-header {
   opacity: 0.7;
+  width: 20vw;
+  height: auto;
 }
 
 .App-menu-line {
-  height: 329px;
+  height: 25vw;
   border-left: 1.5px solid;
   border-color: #45B3E6;
   margin-left: 32px;
@@ -95,17 +107,14 @@ a:hover {
 }
 
 .App-footer-for-header-container {
-  background-color: #3E4095;
-  opacity: 0.75;
-  width: 100%;
-  height: 100px;
-}
-
-.App-footer-for-header-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  background-color: #3E4095;
+  opacity: 0.75;
+  width: 100%;
+  height: 100px;  
 }
 
 .App-connection-rectangle-container {
@@ -144,7 +153,8 @@ a:hover {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end; 
+  margin-right: 0; 
 }
 
 .App-footer-line {
@@ -170,6 +180,7 @@ a:hover {
 
 .App-right-text-footer-for-header-container {
   width: 240px;
+  margin-left: 0;
 }
 
 .section-our-files {
@@ -260,6 +271,10 @@ a:hover {
   margin-bottom: 50px;
 }
 
+.section-ministries {
+  width: 100%;
+}
+
 .ministries-title>hr {
   width: 60% !important;
   text-align: left;
@@ -275,6 +290,7 @@ a:hover {
   align-items: flex-start;
   justify-content: center;
   height: 65vh;
+  width: 100%;
 }
 
 .ministries-card-left-line {
@@ -290,6 +306,7 @@ a:hover {
 }
 
 .section-our-history {
+  width: 100%;
   margin-top: 50px;
   display: flex;
   flex-direction: column;
@@ -353,7 +370,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 422px;
+  height: 422px;  
 }
 
 .footer {
@@ -367,7 +384,7 @@ a:hover {
   height: 80px;
   display: flex;
   align-items: center;
-  justify-content: center;    
+  justify-content: center;
 }
 
 .footer-header-logo {
@@ -412,22 +429,22 @@ a:hover {
   margin-left: 16px;
 }
 
-.footer-header-container + hr {   
+.footer-header-container+hr {
   align-self: center;
   margin: 0;
   padding: 0;
   margin-left: 5%;
   margin-right: 5%;
   color: #DCDCDC;
-  background-color: #777777;  
+  background-color: #777777;
 }
 
-.footer-body-container { 
-  height: 180px;  
+.footer-body-container {
+  height: 180px;
   display: flex;
   align-items: flex-start;
-  justify-content: space-around; 
-  margin-top: 20px; 
+  justify-content: space-around;
+  margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 10%;
   margin-right: 10%;
@@ -437,7 +454,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;  
+  justify-content: space-between;
   height: 100%;
 }
 
@@ -452,11 +469,11 @@ a:hover {
   color: #DCDCDC;
   font-family: 'Quicksand', sans-serif;
   font-size: 12px;
-  font-weight: normal !important;  
+  font-weight: normal !important;
 }
 
 .footer-body-container a:hover {
-  color: #45B3E6;    
+  color: #45B3E6;
 }
 
 .footer-body-container button {
@@ -470,48 +487,251 @@ a:hover {
 }
 
 .footer-body-container button:hover {
-  color: #45B3E6;    
+  color: #45B3E6;
 }
 
-.footer-body-container + hr {
+.footer-body-container+hr {
   margin: 0;
   padding: 0;
   margin-left: 5%;
   margin-right: 5%;
   color: #DCDCDC;
-  background-color: #777777;  
+  background-color: #777777;
 }
 
-.footer-body-contact-content-container {  
-  display: flex;  
-  flex-direction: row !important;  
+.footer-body-contact-content-container {
+  display: flex;
+  flex-direction: row !important;
   align-items: center !important;
   justify-content: center !important;
   color: #DCDCDC;
   font-family: 'Quicksand', sans-serif;
   font-size: 12px;
-  font-weight: normal !important; 
+  font-weight: normal !important;
 }
 
 .footer-body-contact-content-container span {
-  margin-left: 15px;  
-  text-align: left;  
+  margin-left: 15px;
+  text-align: left;
 }
 
 .footer-copyright-container {
   display: flex;
   flex-direction: column;
   align-content: center;
-  justify-content: center;  
+  justify-content: center;
   height: 98px;
 }
 
 .footer-copyright-container span {
   color: #DCDCDC;
   font-family: 'Quicksand', sans-serif;
-  font-size: 10px;  
+  font-size: 10px;
 }
 
-.footer-copyright-container span + span {
+.footer-copyright-container span+span {
   margin-top: 15px;
 }
+
+/* Size screen default tablets */
+
+@media screen and (max-width: 768px) {
+  .App {
+    margin: 0 auto;
+  }
+  .our-history-content-container>img:nth-of-type(1) {
+    margin-bottom: 15px;
+  }
+  
+}
+
+/* Size screen default mobile devices */
+
+@media screen and (max-width: 425px) {
+
+  .App-header {
+    height: 100vh;
+    background-size: cover;
+  }
+  .App-menu {
+    height: 100px !important;
+    justify-content: space-between;
+    padding-left: 30px;
+  }
+  .App-menu>a:nth-of-type(1) {
+    width: 50px;
+    padding: 0px;
+    margin-left: 0px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  .App-menu img {
+    width: 100%;
+    height: 100%;
+  }
+  .App-menu ul {
+    display: none;
+  }
+  .one, .two, .three {
+    background-color: #bbdeea;
+    height: 5px;
+    width: 100%;
+    margin: 6px auto;
+    transition-duration: 0.3s;
+  }
+  .menu-toggle {
+    width: 40px;
+    height: 30px;
+    margin-right: 30px;
+  }
+  .App-menu.on {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh !important;
+    background-color: rgba(62, 64, 149, 1);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0px;
+  }
+  .App-menu.on .menu-toggle {
+    position: absolute;
+    right: 0;
+    top: 15px
+  }
+  .App-menu.on>a:nth-of-type(1) {
+    display: none;
+  }
+  .App-menu.on .menu-toggle .one {
+    transform: rotate(45deg) translate(7px, 7px);
+  }
+  .App-menu.on .menu-toggle .two {
+    opacity: 0;
+  }
+  .App-menu.on .menu-toggle .three {
+    transform: rotate(-45deg) translate(8px, -9px);
+  }
+  .App-menu.on ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px !important;
+    padding-right: 0px;
+  }
+  .App-menu.on ul li {
+    margin: 0;
+    padding: 0;
+  }
+  .App-menu.on ul a {
+    transition-duration: 0.5s;
+    font-size: 2.5rem;
+    line-height: 5rem;
+    margin: 0px auto !important;
+    padding: 0px auto !important;
+  }
+  .App-menu.on ul li {
+    margin: 0px auto !important;
+    padding: 0px auto !important;
+  }
+  .App-logo-menu {
+    margin-right: 0;
+  }
+  .App-menu-text-title {
+    font-size: 36px;
+  }
+  .App-menu-center-container {
+    height: 350px;
+    padding-top: 0px;    
+    margin-bottom: 12px;
+  }
+  .App-menu-center-container p {
+    margin: 0;
+  }
+
+  .App-footer-for-header-container p {
+    display: none;
+  }
+
+  .App-footer-line {
+    display: none;
+  }
+
+  .App-connection-rectangle-container {
+    display: none;
+  }
+
+  .section-our-files>p:nth-of-type(1) {
+    font-size: 40px;
+  }
+
+  .section-bulletins>p:nth-of-type(1) {
+    font-size: 40px;
+  }
+
+  .ministries-title {
+    font-size: 40px;
+  }
+
+  .section-our-history>p:nth-of-type(1) {
+    font-size: 40px;
+  }
+
+  .section-messages>p:nth-of-type(1) {
+    font-size: 40px;
+  }
+
+
+  .ministries-content-container {    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+    height: auto;   
+  } 
+
+  .ministries-card-left-line {
+    display: none;
+  }
+
+  .section-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: auto;
+    
+    flex-direction: column;   
+  }
+
+  .footer {
+    height: auto;
+  }
+
+  .footer-body-container {
+    display: none;
+  } 
+
+  .footer-header-links {
+    display: none;
+  }
+
+  .footer-header-logo {
+    padding-left: 0;
+    width: 90%;
+  }
+
+  .footer-header-logo img {
+    width: 35px;
+}
+
+  .footer-header-logo span {
+    font-size: 16px;
+  }
+
+
+}
+

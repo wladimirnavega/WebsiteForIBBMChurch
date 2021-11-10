@@ -11,22 +11,22 @@
 
 .ministries-card-container:hover {
   background-color: #eae3e3;
-  transform:scale(1.05,1.05);
+  transform: scale(1.05, 1.05);
 }
 
-.ministries-card-container:hover .ministries-card-icon-container {  
-  background: linear-gradient( to left, #3F4359 0%, #45B3E6 100%); 
-  transform:scale(1.05,1.05);
+.ministries-card-container:hover .ministries-card-icon-container {
+  background: linear-gradient( to left, #3F4359 0%, #45B3E6 100%);
+  transform: scale(1.05, 1.05);
 }
 
-.ministries-card-container:hover .ministries-card-title * {    
-  color: #3F4359;   
-  transform:scale(1.05,1.05);
+.ministries-card-container:hover .ministries-card-title * {
+  color: #3F4359;
+  transform: scale(1.05, 1.05);
 }
 
 .ministries-card-icon-container {
   width: 114px;
-  height: 114px;  
+  height: 114px;
   border-radius: 50%;
   border-width: 1px;
   border-style: solid;
@@ -56,4 +56,21 @@
   font-size: 13px;
   font-weight: lighter;
   color: #958B7E;
+}
+
+/* Size screen default mobile devices */
+
+@media screen and (max-width: 425px) {
+  .ministries-card-container {
+    flex-direction: row;  
+    height: 160px;
+    width: 90%;
+    border: 0.5px solid #3F4359;   
+    margin-top: 12px;  
+    border-radius: 10px;    
+  }
+
+  .ministries-card-title {
+    margin-top: 0;
+  }
 }

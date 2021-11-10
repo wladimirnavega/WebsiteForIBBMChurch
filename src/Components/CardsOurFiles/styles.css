@@ -3,10 +3,10 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 459.88px; 
+  height: 459.88px;
   margin-left: 100px !important;
-  margin-right: 100px !important; 
-  background-color:#F5F5F5;  
+  margin-right: 100px !important;
+  background-color: #F5F5F5;
 }
 
 .cards-slider-container a {
@@ -19,7 +19,7 @@
   height: 321.69px;
   background: #F5F5F5;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 10px;   
+  border-radius: 10px;
   transition: 0.3s;
 }
 
@@ -28,7 +28,7 @@
   font-size: 13px;
   text-align: justify;
   padding-left: 15px;
-  padding-right: 15px; 
+  padding-right: 15px;
   color: '#000';
 }
 
@@ -44,43 +44,42 @@
   margin-bottom: 8px;
 }
 
-.card-container > img {
+.card-container>img {
   border-top-left-radius: 10px;
-  border-top-right-radius: 10px;  
+  border-top-right-radius: 10px;
 }
 
 .arrowsRight:hover {
   color: #383838;
 }
 
-.arrowsContainer{
+.arrowsContainer {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;    
+  height: 100%;
 }
 
 .arrowsCarousel {
-  background-color: transparent; 
-  border: none; 
-  outline:none;
+  background-color: transparent;
+  border: none;
+  outline: none;
   height: 100%;
   opacity: 1 !important;
 }
 
-.arrowsContainer:hover{
-  cursor: pointer;  
+.arrowsContainer:hover {
+  cursor: pointer;
   border: none;
-  outline:none; 
+  outline: none;
 }
 
 .arrowsCarousel:link, .arrowsCarousel:visited, .arrowsCarousel:active {
   cursor: pointer;
-  background-color: transparent; 
+  background-color: transparent;
   border: none;
-  outline:none;
+  outline: none;
 }
-
 
 .arrowsCarousel:link *, .arrowsCarousel:visited *, .arrowsCarousel:active * {
   font-size: 300px;
@@ -88,12 +87,17 @@
 }
 
 .cardLink {
-  border: none !important;   
+  border: none !important;
 }
 
 .cardLink:hover .card-container {
-  transform:scale(1.05,1.05);  
+  transform: scale(1.05, 1.05);
   background-color: #aad8ed;
 }
 
-
+@media screen and (max-width: 425px) {
+  .cards-slider-container {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+  }
+}
